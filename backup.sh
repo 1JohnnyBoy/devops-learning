@@ -27,4 +27,6 @@ echo "$(date '+%d/%m/%Y %H:%M:%S') : $archive" >> "$journal"
 
 echo "Sauvegarde terminée : $archive" 
 
+
+
 #création d1 archive du répertoire devops et un journal de cet archive dans ce script, l'archive et le journal seront dans dest_dir
