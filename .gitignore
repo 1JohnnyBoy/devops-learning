@@ -1,6 +1,7 @@
 sauvegarde/
 *.txt
 *.save
+*.log
 
 #liste les fichiers et répertoires que Git doit ignorer
 
