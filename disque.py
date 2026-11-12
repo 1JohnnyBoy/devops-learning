@@ -6,7 +6,7 @@ import shutil
 
 journal = "/home/johan/devops/moniteur.log"
 maintenant = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-seuil = 0
+seuil = 80
 total, utilise, libre = shutil.disk_usage("/mnt/c")
 pourcentage = utilise / total * 100
 
