@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verifications:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Vérifier les scripts Bash
+        run: shellcheck *.sh
+
+      - name: Vérifier la syntaxe Python
+        run: python3 -m py_compile disque.py
+
+      - name: Construire l'image Docker
+        run: docker build -t mon-site:test site
