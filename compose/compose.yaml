@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - donnees-db:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    ports:
+      - "127.0.0.1:8082:8080"
+    depends_on:
+      - db
+
+volumes:
+  donnees-db:
